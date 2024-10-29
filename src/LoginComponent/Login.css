@@ -1,0 +1,199 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Background and Centering */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url('/public/images/dna-hd.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+  z-index: 10; /* Ensures it stays above other content */
+}
+
+.heading {
+  text-align: left;
+  position: absolute;
+  top: 20%;
+  left: 50px;
+  color: rgb(7, 7, 7);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  font-size: 1.8rem;
+}
+
+/* Form Styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  max-width: 600px;
+  width: 90%;
+  margin: 20px;
+  transform: translateY(-10%);
+}
+
+.login-form h2 {
+  text-align: left;
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #141313;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
+}
+
+.input-group input:focus {
+  border-color: #3f5fff;
+  box-shadow: 0 0 5px rgba(63, 95, 255, 0.5);
+  outline: none;
+}
+
+/* Remember Me Checkbox */
+.remember-me {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.remember-me input {
+  margin-right: 5px;
+}
+
+/* Login/Signup Button */
+.login-btn {
+  padding: 10px 15px;
+  background-color: #3f5fff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.3s, transform 0.2s ease;
+}
+
+.login-btn:hover {
+  background-color: #345bd2;
+  transform: scale(1.02);
+}
+
+.links {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.links a {
+  color: #3f5fff;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* Form Toggle Button */
+.form-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.toggle-btn {
+  background-color: transparent;
+  border: 1px solid #3f5fff;
+  color: #3f5fff;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s ease;
+}
+
+.toggle-btn:hover {
+  background-color: rgba(63, 95, 255, 0.1);
+}
+
+.toggle-btn.active {
+  background-color: #3f5fff;
+  color: white;
+}
+
+.toggle-btn:active {
+  transform: scale(0.98);
+}
+
+/* Animations */
+.toggle-btn, .login-btn {
+  transition: all 0.3s ease;
+}
+
+.toggle-btn:hover, .login-btn:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 24px;
+    left: 20px;
+  }
+
+  .login-form {
+    width: 80%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 20px;
+    left: 10px;
+  }
+
+  .login-form {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .login-btn {
+    font-size: 14px;
+  }
+}

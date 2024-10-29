@@ -1,0 +1,186 @@
+.carousel-image {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.carousel img {
+  max-width: 100%; /* Make images responsive */
+  height: auto;
+  border-radius: 50%;
+  transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+}
+
+.carousel img:hover {
+  transform: scale(1.05); /* Slightly enlarge image on hover */
+}
+
+button.prev,
+button.next {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0 15px;
+  color: #000;
+  position: absolute; /* Position buttons */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for button height */
+}
+
+button.prev {
+  left: 10px; /* Position left button */
+}
+
+button.next {
+  right: 10px; /* Position right button */
+}
+
+button.prev:hover,
+button.next:hover {
+  color: #0056b3;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 20px; /* Space below heading */
+  font-family: 'Playfair Display', serif; /* Use the new font */
+  font-weight: 700;
+}
+.hero-content {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  justify-content: flex-start; /* Center items horizontally */
+  margin-top: 20px; /* Adds space above the flex container */
+}
+
+.hero-description {
+  font-size: 1.2em; /* Increases font size for better readability */
+  margin-bottom: 20px; /* Adds space below the description */
+}
+
+.hero-image {
+  width: 150px; /* Set a smaller width for the image */
+  height: auto; /* Keeps the aspect ratio */
+  margin-right: 20px; /* Adds space above and below the image */
+}
+
+.login-btn {
+  padding: 10px 15px; /* Increased padding for better touch targets */
+  background-color: #3f5fff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem; /* More readable font size */
+  width: 60%; /* Percentage of the parent container's width */
+  max-width: 120px; /* Maximum width to maintain compact size */
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 1% auto; /* Center button */
+}
+
+.login-btn:hover {
+  background-color: #364ddc; /* Darker shade on hover */
+}
+
+/* Responsive adjustments for buttons */
+@media (max-width: 768px) {
+  .login-btn {
+    font-size: 0.8rem; /* Adjust font size for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .login-btn {
+    font-size: 0.7rem; 
+    padding: 8px 12px; /* Slightly less padding */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem; /* Slightly smaller heading for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem; /* Smaller heading for small screens */
+  }
+}
+
+.carousel {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.login-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Carousel navigation button styling */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
