@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import necessary modules for routing
 import './App.css';
+import Header from './LoginHeader/Header';
+import Hero from './LoginHeader/Hero';
+import Login from './LoginComponent/Login';
 
 function App() {
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+
+  const toggleLoginModal = () => {
+    setIsLoginOpen(!isLoginOpen);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router> {/* Wrap the application in Router for routing functionality */}
+      <div className="App">
+        <Header onLoginClick={toggleLoginModal}/>
+        {isLoginOpen && <Login onClose={toggleLoginModal} />}
+        <Routes> {/* Define your routes here */}
+          <Route path="/" element={<Hero />} /> {/* Hero component on the root path */}
+          <Route path="/login" element={<Login />} /> {/* Login component on /login path */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
