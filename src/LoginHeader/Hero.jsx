@@ -13,14 +13,16 @@ const Hero = () => {
   return (
     <section className="hero">
       <h1>MÉNIÈRE'S DISEASE ATLAS</h1>
-      <img 
-        src="/images/MD-Atlas-logo.png" 
-        alt="Meniere's Disease Atlas" 
-        className="hero-image" // Add a class for styling
-      />
-      <p className="hero-description">
-      Meniere’s Disease (MD) is an inflammatory disorder of the inner ear defined by episodes of vertigo associated with sensorineural hearing loss, tinnitus, and aural fullness. Epidemiological, clinical and molecular research support several mechanisms, including rare genetic variants, leading to autosomal dominant or recessive inheritance, and changes in the immune response.
-      </p>
+      <div className="hero-content">
+        <img 
+          src="/images/MD-Atlas-logo.png" 
+          alt="Meniere's Disease Atlas" 
+          className="hero-image" // Add a class for styling
+        />
+        <p className="hero-description">
+          Explore comprehensive data and insights on Ménière's Disease. Our atlas serves as a valuable resource for understanding the complexities of this condition, providing research findings, treatment options, and support resources for patients and healthcare professionals.
+        </p>
+      </div>
       <Carousel />
     </section>
   );

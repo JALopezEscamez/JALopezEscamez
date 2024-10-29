@@ -50,27 +50,31 @@ button.next:hover {
 
 .hero h1 {
   font-size: 3rem;
-  color: #333;
+  color: #000000;
   margin-bottom: 20px; /* Space below heading */
   font-family: 'Playfair Display', serif; /* Use the new font */
   font-weight: 700;
 }
 .hero-content {
   display: flex; /* Use flexbox for layout */
-  align-items: center; /* Center items vertically */
-  justify-content: flex-start; /* Center items horizontally */
+  align-items: flex-start; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
   margin-top: 20px; /* Adds space above the flex container */
 }
 
 .hero-description {
-  font-size: 1.2em; /* Increases font size for better readability */
-  margin-bottom: 20px; /* Adds space below the description */
+  max-width: 1000px; /* Optional: limits the max width of the text */
+  text-align: left; /* Aign text to the left */
+  font-size: 1em; /* Font size for the description */
+  color: #333; /* Adds space below the description */
 }
 
 .hero-image {
-  width: 150px; /* Set a smaller width for the image */
-  height: auto; /* Keeps the aspect ratio */
-  margin-right: 20px; /* Adds space above and below the image */
+  width: 250px; /* Set a width for the image */
+  height: auto; /* Keep the aspect ratio */
+  margin-right: 20px; /* Adds space to the right of the image */
+  border: 1px solid #ffffff; /* Optional: adds a border around the image */
+  border-radius: 8px; /* Adds space above and below the image */
 }
 
 .login-btn {
